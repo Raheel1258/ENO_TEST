@@ -102,7 +102,7 @@ const MyTabs = () => {
           backgroundColor: colors.greyColor,
           position: "absolute",
           paddingTop: 10,
-          height: 60,
+          height: 90,
         },
       }}
 
