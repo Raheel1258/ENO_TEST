@@ -77,6 +77,7 @@ const App = () => {
         name="todo"
         options={{
           title: "To Do",
+          headerBackTitle: '',
           headerStyle: {
             backgroundColor: colors.greyColor,
           },
