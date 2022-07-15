@@ -2,6 +2,8 @@ import React from "react";
 import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
+import { colors } from '../utils/theme';
+
 const ProfileScreen = () => {
   const navigation = useNavigation();
 
@@ -23,7 +25,7 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.whiteColor,
   },
   title: {
     textAlign: 'center',

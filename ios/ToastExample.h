@@ -5,12 +5,9 @@
 //  Created by Sparrow on 15/07/2022.
 //
 
-#import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface ToastExample : NSObject
-
+@interface ToastExample : NSObject <RCTBridgeModule>
 @end
 
-NS_ASSUME_NONNULL_END
+

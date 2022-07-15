@@ -1,6 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+
 import { Todo } from '../utils/interface'
+import { colors } from '../utils/theme';
 
 const SlidesComponent = ({ item }: { item: Todo }) => {
 
@@ -17,7 +19,7 @@ const SlidesComponent = ({ item }: { item: Todo }) => {
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: '#D9D9D9',
+    backgroundColor: colors.greyColor,
     height: 56,
     marginBottom: 30,
     justifyContent: 'center',

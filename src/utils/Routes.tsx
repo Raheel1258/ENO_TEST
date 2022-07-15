@@ -5,9 +5,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 
 import { HomeContainer, ProfileContainer, ToDoContainer } from "../containers";
+import { colors } from "./theme";
+
 import HomeImage from "../assets/images/home.png";
 import ProfileImage from "../assets/images/profile.png";
-import { colors } from "./theme";
+
 
 const Stack = createStackNavigator();
 const HomeStack = createStackNavigator();

@@ -1,35 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   SafeAreaView,
   StyleSheet,
   FlatList,
   Text,
   View,
-  Dimensions,
   ActivityIndicator
 } from "react-native";
 
 import SlidesComponent from "../components/SlidesComponent";
 import { Todo } from '../utils/interface'
+import { colors } from '../utils/theme';
 
-const ToDoScreen = () => {
-  const windowHeight = Dimensions.get('window').height;
-
-  const [animation, setAnimation] = useState(true)
-  const [todoList, setTodoList] = useState<Todo[]>([])
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-  const fetchData = () => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      .then(data => {
-        setTodoList(data)
-        setAnimation(false);
-      });
-  };
+type Props = {
+  animation: boolean,
+  todoList: Todo[],
+  windowHeight: number
+}
+const ToDoScreen = ({
+  animation,
+  todoList,
+  windowHeight
+}: Props) => {
 
   const renderItem = ({ item }: { item: Todo }) => <SlidesComponent item={item} />;
 
@@ -72,7 +64,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: colors.whiteColor,
   },
 });
 
