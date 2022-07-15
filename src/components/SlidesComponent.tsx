@@ -3,7 +3,6 @@ import { View, StyleSheet, Text } from "react-native";
 import { Todo } from '../utils/interface'
 
 const SlidesComponent = ({ item }: { item: Todo }) => {
-  console.log('item id ', item.id);
 
   return (
     <View style={styles.cardContainer} >
