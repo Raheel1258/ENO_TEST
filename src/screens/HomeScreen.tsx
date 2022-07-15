@@ -17,7 +17,6 @@ const HomeScreen = () => {
           onPress={() => navigation.navigate('todo')}
         />
       </View>
-
     </SafeAreaView>
   );
 };
