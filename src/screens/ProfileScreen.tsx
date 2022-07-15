@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text } from "react-native";
+import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 const ProfileScreen = () => {
@@ -7,7 +7,15 @@ const ProfileScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text onPress={() => navigation.navigate('todo')} style={styles.heading}>Welcome Profile Screen</Text>
+      <View>
+        <Text style={styles.title}>
+          Welcome to Profile Screen
+        </Text>
+        <Button
+          title="todo list"
+          onPress={() => navigation.navigate('todo')}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -17,10 +25,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  heading: {
+  title: {
+    textAlign: 'center',
+    marginVertical: 20,
     fontSize: 24,
-    fontWeight: "600",
-    padding: 10,
   },
 });
 
